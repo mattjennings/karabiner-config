@@ -1,0 +1,212 @@
+{
+  "title": "Caps Lock Layering",
+  "rules": [
+    {
+      "description": "Caps Lock Layering",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "caps_lock"
+          },          
+          "to": [
+            {
+              "set_variable": {
+                "name": "caps_lock pressed",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "caps_lock pressed",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "escape"
+            }
+          ],
+          "type": "basic"
+        },
+
+        {
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          
+          "from": {
+            "key_code": "o"
+          },
+          "to": [{
+            "key_code": "open_bracket",
+            "modifiers": [
+              "left_shift"
+            ]
+          }],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          
+          "from": {
+            "key_code": "p"
+          },
+          "to": [{
+            "key_code": "close_bracket",
+            "modifiers": [
+              "left_shift"
+            ]
+          }],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          
+          "from": {
+            "key_code": "l"
+          },
+          "to": [{
+            "key_code": "9",
+            "modifiers": [
+              "left_shift"
+            ]
+          }],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          
+          "from": {
+            "key_code": "semicolon"
+          },
+          "to": [{
+            "key_code": "0",
+            "modifiers": [
+              "left_shift"
+            ]
+          }],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          
+          "from": {
+            "key_code": "period"
+          },
+          "to": [{
+            "key_code": "open_bracket"
+          }],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          
+          "from": {
+            "key_code": "slash"
+          },
+          "to": [{
+            "key_code": "close_bracket"
+          }],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          
+          "from": {
+            "key_code": "quote"
+          },
+          "to": [{
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": [
+              "left_shift"
+            ]
+          }],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],           
+          "from": {
+            "key_code": "u"
+          },
+          "to": [{
+            "key_code": "backslash",            
+            "modifiers": [
+              "left_shift"
+            ]
+          }],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "caps_lock pressed",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          
+          "from": {
+            "key_code": "i"
+          },
+          "to": [{
+            "key_code": "7",
+            "modifiers": [
+              "left_shift"
+            ]
+          }],
+          "type": "basic"
+        }
+        
+      ]
+    }
+  ]
+}
